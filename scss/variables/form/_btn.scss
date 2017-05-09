@@ -1,0 +1,38 @@
+
+$bnt-color-background: $color-default-background;
+$bnt-color-text: $color-default-text;
+
+$bnt-text-align: center;
+
+$btn-padding-vertical: 6px;
+$btn-padding-horizontal: 12px;
+$btn-padding: $btn-padding-vertical $btn-padding-horizontal;
+
+$btn-margin-top: 0;
+$btn-margin-bottom: 5px;
+$btn-margin-left: 0;
+$btn-margin-right: 0;
+$btn-margin: $btn-margin-top $btn-margin-right $btn-margin-bottom $btn-margin-left;
+
+$btn-border-width: 1px;
+$btn-border-style: solid;
+$btn-border-color: #ccc;
+$btn-border-radius: 5px;
+
+$btn-cursor: pointer;
+
+$btn-theme-info-border-radius: 40px !important;
+
+$btn-theme-info-padding-vertical: 6px;
+$btn-theme-info-padding-horizontal: 12px;
+$btn-theme-info-padding: $btn-theme-info-padding-vertical $btn-theme-info-padding-horizontal;
+
+
+$btn-theme-info-background-color: #eaeaea;
+$btn-theme-info-box-shadow: "0 5px 8px rgba(0,0,0,.25), inset 0 -5px 5px rgba(100,100,100,0.1), inset 0 5px 5px rgba(255,255,255,0.5)";
+
+/*
+    0 5px 8px rgba(0,0,0,.25),                //  outside black bottom shadow
+    inset 0 -5px 5px rgba(100,100,100,0.1),   //  inside lightgrey bottom
+    inset 0 5px 5px rgba(255,255,255,0.5);    //  inside white top shadow
+*/

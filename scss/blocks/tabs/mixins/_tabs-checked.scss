@@ -1,0 +1,7 @@
+@mixin tabs-checked($tabs-type, $tabs-number) {
+  @for $i from 1 through $tabs-number {
+    ##{$tabs-type}-#{$i}:checked ~ ##{$tabs-type}-content-#{$i} {
+      @extend %tabs-value;
+    }
+  }
+}

@@ -1,0 +1,3 @@
+&_bordered {
+  @include border-all($table-border-width, $table-border-style, $table-border-color);
+}

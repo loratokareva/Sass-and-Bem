@@ -1,0 +1,58 @@
+@import "layout";
+@import "../../mixins/border-position", "../../mixins/border-all";
+
+
+.table {
+  margin-bottom: $table-margin-bottom;
+  &__caption {
+    text-align: $table-cell-align-caption;
+    h3 {
+      margin-bottom: 0;
+    }
+    p{
+      font-size: .9em;
+      color: $color-info-background;
+      margin-top: 0;
+    }
+    strong {
+      color: $color-primary-background;
+    }
+  }
+  &__row {
+    @include border-position(bottom, $table-border-width, $table-border-style, $table-border-color);
+    &_header {
+      border: none;
+    }
+
+  }
+
+  &__cell {
+    &_header {
+      padding-bottom:0;
+      font-weight: $font-weight * 7;
+      text-align: $table-cell-align-header;
+      border: none;
+    }
+    &_header-units {
+      padding-top:0;
+      text-align: $table-cell-align-header;
+      @include border-position(bottom, $table-border-width+1, $table-border-style, $table-border-color);
+    }
+    &_body {
+      text-align: $table-cell-align-body;
+      &:first-of-type {
+        text-align: left;
+      }
+    }
+  }
+
+  @import "state/hover";
+
+  @import "state/bordered";
+
+  @import "state/striped";
+
+
+
+}
+

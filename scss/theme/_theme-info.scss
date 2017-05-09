@@ -1,0 +1,7 @@
+  &_theme-info {
+    padding: $btn-theme-info-padding;
+    border-radius: $btn-theme-info-border-radius;
+    background-color: $btn-theme-info-background-color;
+    @include box-shadow($btn-theme-info-box-shadow);
+  }
+

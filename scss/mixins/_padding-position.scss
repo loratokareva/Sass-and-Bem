@@ -1,0 +1,3 @@
+@mixin padding-position($type, $indent) {
+  padding-#{$type}: $indent;
+}

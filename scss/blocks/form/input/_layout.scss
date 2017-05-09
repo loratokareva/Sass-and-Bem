@@ -1,0 +1,57 @@
+@import "../../../mixins/border-all";
+@import "../../../mixins/border-position-radius-reset";
+@import "../../../mixins/border-position-reset";
+@import "../../../variables/form/input";
+
+.input-inner {
+  display: table;
+  width: 100%;
+
+  &__control,
+  &__addon {
+    display: table-cell;
+    padding: $input-padding;
+    box-sizing: border-box;
+    width: $input-width;
+    @include border-all($input-border-width, $input-border-style, $input-border-color);
+    border-radius: $input-border-radius;
+    background-color: $input-background-color;
+  }
+
+  &__control {
+    width: 100%;
+
+    &:first-child {
+      @include border-position-radius-reset(right);
+    }
+    &:last-child {
+      @include border-position-radius-reset(left);
+    }
+  }
+
+  &__addon {
+    width: $input-inner-addon-width;
+    text-align: $input-inner-addon-align;
+
+    vertical-align: middle;
+
+    &:first-child {
+      @include border-position-reset(right);
+    }
+    &:last-child {
+      @include border-position-reset(left);
+    }
+
+    .fa {
+      display: block;
+    }
+  }
+
+}
+
+
+/*
+input[type=radio],
+input[type=checkbox] {
+  margin: 4px 0 0;
+}*/

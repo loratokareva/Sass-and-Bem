@@ -1,0 +1,73 @@
+@import "../../../../mixins/vendor-prefixes/linear-gradient";
+@import "../../../../mixins/vendor-prefixes/box-shadow";
+@import "../../../../variables/form/checkbox-theme-info";
+
+.checkbox-inner {
+
+  &_theme-info {
+    display: block  !important;
+    position: relative;
+    width: $checkbox-theme-info-width;
+    height: $checkbox-theme-info-height;
+    margin-top: $theme-info-margin;
+
+
+    & .checkbox__control {
+      position: absolute;
+      width: $checkbox-width;
+      height: $checkbox-height;
+      top: 0;       right: 0;      bottom: 0;      left: 0;
+      z-index: 5;
+      opacity: 0;
+      cursor: $checkbox-cursor;
+
+      &:checked {
+        & ~ label {
+          @include linear-gradient($label-checked-gradient-initial, $label-checked-gradient-final);
+          &:before {
+            background: $checkbox-checked-before-background;
+          }
+        }
+      }
+    }
+
+    & .label__control {
+      width: $label-width;
+      height: $label-height;
+      position: relative;
+      display: block;
+      padding-left: 0;
+      border-radius: $label-border-radius;
+      background: $label-background;
+
+      @include box-shadow($theme-info-label-box-shadow);
+      &:after,
+      &:before {
+        content: "";
+        position: absolute;
+        border-radius: inherit;
+      }
+      // inside circle
+      &:before {
+        width: $label-before-width;
+        height: $label-before-height;
+        top: $label-before-top;
+        left: $label-before-left;
+        background: $label-before-background;
+        @include box-shadow($theme-info-label-box-shadow-before);
+      }
+      // outside circle
+      &:after {
+        top: $label-after-top;
+        left: $label-after-left;
+        right: $label-after-right;
+        bottom: $label-after-bottom;
+        z-index: -1;
+        @include linear-gradient($label-after-gradient-initial, $label-after-gradient-final);
+        @include box-shadow($theme-info-label-box-shadow-after);
+      }
+
+    }
+  }
+
+}

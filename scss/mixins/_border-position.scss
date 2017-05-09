@@ -1,0 +1,3 @@
+@mixin border-position($position, $width, $style, $color) {
+  border-#{$position}: $width $style $color;
+}

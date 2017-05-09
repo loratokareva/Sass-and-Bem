@@ -1,0 +1,10 @@
+&_hover   {
+  .table__row {
+    &:hover {
+      background-color: $color-gray-lighten;
+    }
+    &_header:hover {
+      background: none;
+    }
+  }
+}

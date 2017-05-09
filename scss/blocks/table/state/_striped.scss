@@ -1,0 +1,7 @@
+&_striped   {
+  .table__row_body {
+    &:nth-child(odd) {
+      background-color: $color-gray-lighten;
+    }
+  }
+}

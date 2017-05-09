@@ -1,0 +1,8 @@
+@import "layout";
+
+@import "table", "form";
+
+
+.tabs:not(:first-of-type) {
+  margin: $tabs-margin;
+}

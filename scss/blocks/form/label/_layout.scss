@@ -1,0 +1,19 @@
+
+label {
+  font-weight: $label-font-weight;
+  cursor: $label-cursor;
+}
+
+.label-inner {
+  padding-top: $label-inner-gap;
+  padding-left: $label-inner-left-gap;
+  @media (max-width: 768px) {
+    padding-left: 0;
+  }
+
+  &__control {
+    color: $label-color;
+    font-weight: $label-font-weight;
+
+  }
+}

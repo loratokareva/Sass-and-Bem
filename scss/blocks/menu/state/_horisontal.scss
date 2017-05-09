@@ -1,0 +1,8 @@
+&_horisontal {
+  display: table;
+  width: 100%;
+  .menu__item {
+    display: table-cell;
+    text-align: center;
+  }
+}

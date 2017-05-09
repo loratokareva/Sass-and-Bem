@@ -1,0 +1,31 @@
+.table {
+  width: 100%;
+  display: table;
+  border-collapse: collapse;
+
+  &__caption {
+    display: table-caption;
+  }
+  &__header,
+  &__body{
+    display: table-header-group;
+    vertical-align: middle;
+  }
+  &__row {
+    display: table-row;
+    vertical-align: inherit;
+  }
+  &__cell {
+    display: table-cell;
+    font: $font-weight $font-size $font-family;
+    text-align: $table-cell-align;
+    padding: $table-cell-padding;
+  }
+}
+
+
+/*
+even	2, 4
+odd	1, 3
+*/
+

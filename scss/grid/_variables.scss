@@ -1,0 +1,18 @@
+body {
+  margin:0;
+  padding:0;
+}
+
+// Grid System
+$grid-margin-left: 1.6%;
+$grid-number: 12;
+
+%mixed-variable {
+  position: relative;
+  min-height: 1px;
+}
+
+%column-type-float {
+  float: left;
+}
+

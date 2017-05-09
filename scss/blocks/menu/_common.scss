@@ -1,0 +1,33 @@
+@import "layout";
+
+.menu {
+
+  &__item {
+    @import "state/active";
+    a,
+    span  {
+      padding: $padding-list 10px;
+    }
+
+    a {
+      display: block;
+      color: $color-link;
+      text-decoration: $text-decoration-link;
+      background-color: $background-color-link;
+    }
+    }
+
+  @import "state/hover";
+
+  @import "state/horisontal";
+}
+
+.navigation_title {
+  color: $color-navigation-title;
+  font-weight: $font-weight*6;
+  padding: $padding-navigation-title;
+  background-color: $background-color-navigation-title;
+  strong {
+    font-weight: $font-weight * 7;
+  }
+}

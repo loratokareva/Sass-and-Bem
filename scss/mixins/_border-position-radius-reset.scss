@@ -1,0 +1,4 @@
+@mixin border-position-radius-reset($type) {
+  border-top-#{$type}-radius: 0;
+  border-bottom-#{$type}-radius: 0;
+}

@@ -1,0 +1,33 @@
+@import "mixins/border-all";
+@import "mixins/padding-position";
+
+.content-main{
+  &_width-indent {
+    @include padding-position(right, 15px);
+  }
+}
+
+.header-hat,
+.footer-page {
+  background-color: $page-background-color;
+  text-align: $header-hat-align;
+
+}
+
+.header-hat,
+.footer-page,
+.main-page{
+  padding: $page-padding;
+  margin: $page-margin;
+}
+.header-hat,
+.footer-page {
+  @include border-all($header-hat-border-width, $header-hat-border-style, $color-gray-light);
+}
+
+.main-page{
+  background-color: $main-background-color;
+}
+.example-text {
+  letter-spacing: 25px;
+}

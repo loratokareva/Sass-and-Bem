@@ -1,0 +1,15 @@
+
+&_hover
+  &__item {
+    &:hover {
+      color: $color-list-hover;
+      background-color: $background-color-list-hover;
+    }
+    a {
+
+      &:hover {
+        color: $color-link-hover;
+        background-color: $background-color-link-hover;
+      }
+    }
+  }

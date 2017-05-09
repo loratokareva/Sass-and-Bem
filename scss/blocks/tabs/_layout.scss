@@ -1,0 +1,77 @@
+@import "../../mixins/border-all", "../../mixins/border-position";
+
+%tabs-border-all {
+  @include border-all($tabs-border-width, $tabs-border-style, $tabs-border);
+}
+
+.tabs {
+  @media screen and (max-width: 768px) {
+    min-width: 440px;
+  }
+
+  font-size: 0;
+  &__input,
+  &__panel {
+    display: none;
+  }
+
+  &__input {
+    &:checked + label {
+      @include border-position(bottom, $tabs-border-width, $tabs-border-style, $tabs-panel-background);
+      background: $tabs-label-background-checked;
+    }
+  }
+  &__panel {
+    font-size: $tabs-panel-font-size;
+    padding: $tabs-panel-padding;
+    background: $tabs-panel-background;
+    @extend %tabs-border-all;
+  }
+
+  &__label {
+    display: inline-block;
+    @media only screen and (min-width: 320px) and (max-width: 768px) {
+      display: block;
+    }
+    margin: $tabs-label-margin;
+    padding: $tabs-label-padding;
+    text-align: $tabs-label-align;
+    color: $tabs-label-color;
+    font-size: $tabs-label-font-size;
+    @extend %tabs-border-all;
+    background: $tabs-label-background;
+
+    &:not(:last-of-type) {
+      border-right: none;
+      @media screen and (max-width: 768px) {
+        border-right: $tabs-border-width $tabs-border-style $tabs-border;
+
+      }
+    }
+    &:hover {
+      color: $tabs-label-color-hover;
+      cursor: $tabs-label-cursor-hover;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: $font-size + 1;
+     // color: purple; testing
+    }
+    @media screen and (min-width: 768px) {
+      font-size: $font-size -2;
+      padding: 15px;
+      //color: green; testing
+    }
+    @media screen and  (min-width: 992px) {
+      font-size: $font-size + 1;
+      //color: red; testing
+    }
+    @media screen and  (min-width: 1200px) {
+      font-size: $font-size + 1;
+      // color: blue;  testing
+    }
+
+  }
+
+}
+

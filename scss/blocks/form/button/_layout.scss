@@ -1,0 +1,13 @@
+
+.btn {
+  display: inline-block;
+  margin: $btn-margin;
+  color: $bnt-color-text;
+  text-align: $bnt-text-align;
+  white-space: nowrap;
+  cursor: $btn-cursor;
+  @include border-all($btn-border-width, $btn-border-style, $btn-border-color);
+  border-radius: $btn-border-radius;
+  background-color: $bnt-color-background;
+  padding: $btn-padding;
+}

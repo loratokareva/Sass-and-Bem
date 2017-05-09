@@ -1,0 +1,17 @@
+
+.form-fieldset {
+  margin: $form-fieldset-margin;
+}
+
+.fieldset-legend{
+  color: $fieldset-legend-color;
+  font-weight: $fieldset-legend-weight;
+  padding: $fieldset-legend-padding;
+
+}
+
+.help-block {
+  display: block;
+  margin: $help-block-margin;
+  color: $color-gray-light;
+}

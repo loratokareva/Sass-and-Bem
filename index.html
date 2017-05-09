@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список в методологии БЭМ</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/SassAndBem/css/main.css">
+</head>
+<body>
+
+
+<header class="header-hat">
+    <strong class="example-text">HEADER</strong>
+</header>
+
+
+<section class="main-page">
+    <div class="container-fluid">
+        <div class="row container-main">
+
+            <article class="col-xs-12  col-md-12 content-main">
+
+
+                <div class="content-main_width-indent">
+
+                    <h3>
+                        Таблица по БЭМ методологии
+                    </h3>
+
+
+                    <div class="tabs tabs_table">
+
+                        <!-- tabs label-->
+                        <input class="tabs__input" id="table-1" type="radio" name="tabs-table" checked>
+                        <label class="tabs__label" for="table-1"><span>На </span>div</label>
+
+                        <input class="tabs__input" id="table-2" type="radio" name="tabs-table">
+                        <label class="tabs__label" for="table-2"><span>На </span>table</label>
+
+                        <input class="tabs__input" id="table-3" type="radio" name="tabs-table">
+                        <label class="tabs__label" for="table-3"><span>На table плюс </span>_hover</label>
+
+                        <input class="tabs__input" id="table-4" type="radio" name="tabs-table">
+                        <label class="tabs__label" for="table-4"><span>На table плюс </span>_bordered</label>
+
+                        <input class="tabs__input" id="table-5" type="radio" name="tabs-table">
+                        <label class="tabs__label" for="table-5"><span>На table плюс </span>_striped</label>
+                        <!-- /tabs label-->
+                        <!-- tabs drop-down 1-->
+                        <section class="tabs__panel" id="table-content-1">
+                            <!-- table layout in div -->
+                            <div class="table">
+                                <div class="table__caption">
+                                    <h3>
+                                        Табличные данные выводятся посредством тега <strong>div</strong>
+                                    </h3>
+                                    <p>
+                                        Таблицы позволяют представить данные в виде структуры, состоящей из строк,
+                                        столбцов и ячеек.
+                                    </p>
+                                </div>
+                                <div class="table__header">
+                                    <div class="table__row table__row_header">
+                                        <div class="table__cell table__cell_header">ФИО</div>
+                                        <div class="table__cell table__cell_header">Дата</div>
+                                        <div class="table__cell table__cell_header">Рост</div>
+                                        <div class="table__cell table__cell_header">Вес</div>
+                                    </div>
+                                    <div class="table__row table__row_header table__row_header-units">
+                                        <div class="table__cell table__cell_header-units">новорожденного(ой)</div>
+                                        <div class="table__cell table__cell_header-units">гг.мм.дд</div>
+                                        <div class="table__cell table__cell_header-units">сантимметры</div>
+                                        <div class="table__cell table__cell_header-units">граммы</div>
+                                    </div>
+                                </div>
+                                <div class="table__body">
+                                    <div class="table__row table__row_body">
+                                        <div class="table__cell table__cell_body">Сидоров Иван Петрович</div>
+                                        <div class="table__cell table__cell_tbody textLeft">2017.01.07</div>
+                                        <div class="table__cell table__cell_body">53</div>
+                                        <div class="table__cell table__cell_body">2500</div>
+                                    </div>
+                                    <div class="table__row table__row_body">
+                                        <div class="table__cell table__cell_body">Иванов Петр Сидорович</div>
+                                        <div class="table__cell table__cell_tbody textLeft">2017.02.01</div>
+                                        <div class="table__cell table__cell_body">52</div>
+                                        <div class="table__cell table__cell_body">4200</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /table layout in div -->
+                        </section>
+                        <!-- /tabs drop-down 1-->
+                        <section class="tabs__panel" id="table-content-2">
+                            <!-- just table -->
+                            <table class="table">
+                                <caption class="table__caption">
+                                    <h3>
+                                        Табличные данные выводятся посредством тега <strong>table</strong>
+                                    </h3>
+                                    <p>
+                                        Таблицы позволяют представить данные в виде структуры, состоящей из строк,
+                                        столбцов и ячеек.
+                                    </p>
+                                </caption>
+                                <thead class="table__header">
+                                <tr class="table__row table__row_header">
+                                    <th class="table__cell table__cell_header">ФИО</th>
+                                    <th class="table__cell table__cell_header">Дата</th>
+                                    <th class="table__cell table__cell_header">Рост</th>
+                                    <th class="table__cell table__cell_header">Вес</th>
+                                </tr>
+                                <tr class="table__row table__row_header table__row_header-units">
+                                    <td class="table__cell table__cell_header-units">новорожденного(ой)</td>
+                                    <td class="table__cell table__cell_header-units">гг.мм.дд</td>
+                                    <td class="table__cell table__cell_header-units">сантимметры</td>
+                                    <td class="table__cell table__cell_header-units">граммы</td>
+                                </tr>
+                                </thead>
+
+                                <tbody class="table__body">
+                                <tr class="table__row table__row_body">
+                                    <td class="table__cell table__cell_body">Сидоров Иван Петрович</td>
+                                    <td class="table__cell table__cell_tbody textLeft">2017.01.07</td>
+                                    <td class="table__cell table__cell_body">53</td>
+                                    <td class="table__cell table__cell_body">2500</td>
+                                </tr>
+                                <tr class="table__row table__row_body">
+                                    <td class="table__cell table__cell_body">Иванов Петр Сидорович</td>
+                                    <td class="table__cell table__cell_tbody textLeft">2017.02.01</td>
+                                    <td class="table__cell table__cell_body">52</td>
+                                    <td class="table__cell table__cell_body">4200</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <!-- /just table -->
+                        </section>
+                        <!-- /tabs drop-down 2-->
+                        <!-- tabs drop-down 3-->
+                        <section class="tabs__panel" id="table-content-3">
+                            <!-- layout in table add _hover -->
+                            <table class="table table_hover">
+                                <caption class="table__caption">
+                                    <h3>
+                                        Табличные данные выводятся посредством тега <strong>table</strong>
+                                    </h3>
+                                    <p>
+                                        Добавление класса модификатора <strong>_hover</strong> создает подсвечивание
+                                        строк таблицы
+                                    </p>
+                                </caption>
+                                <thead class="table__header">
+                                <tr class="table__row table__row_header">
+                                    <th class="table__cell table__cell_header">ФИО</th>
+                                    <th class="table__cell table__cell_header">Дата</th>
+                                    <th class="table__cell table__cell_header">Рост</th>
+                                    <th class="table__cell table__cell_header">Вес</th>
+                                </tr>
+                                <tr class="table__row table__row_header table__row_header-units">
+                                    <td class="table__cell table__cell_header-units">новорожденного(ой)</td>
+                                    <td class="table__cell table__cell_header-units">гг.мм.дд</td>
+                                    <td class="table__cell table__cell_header-units">сантимметры</td>
+                                    <td class="table__cell table__cell_header-units">граммы</td>
+                                </tr>
+                                </thead>
+
+                                <tbody class="table__body">
+                                <tr class="table__row table__row_body">
+                                    <td class="table__cell table__cell_body">Сидоров Иван Петрович</td>
+                                    <td class="table__cell table__cell_tbody textLeft">2017.01.07</td>
+                                    <td class="table__cell table__cell_body">53</td>
+                                    <td class="table__cell table__cell_body">2500</td>
+                                </tr>
+                                <tr class="table__row table__row_body">
+                                    <td class="table__cell table__cell_body">Иванов Петр Сидорович</td>
+                                    <td class="table__cell table__cell_tbody textLeft">2017.02.01</td>
+                                    <td class="table__cell table__cell_body">52</td>
+                                    <td class="table__cell table__cell_body">4200</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <!-- /layout in table add _hover -->
+                        </section>
+                        <!-- /tabs drop-down 3-->
+                        <!-- tabs drop-down 4-->
+                        <section class="tabs__panel" id="table-content-4">
+                            <!-- layout in table add _bordered -->
+                            <table class="table table_bordered">
+                                <caption class="table__caption">
+                                    <h3>
+                                        Табличные данные выводятся посредством тега <strong>table</strong>
+                                    </h3>
+                                    <p>
+                                        Добавление класса модификатора <strong>_bordered</strong> строит границы для
+                                        всех ячеек таблицы
+                                    </p>
+                                </caption>
+                                <thead class="table__header">
+                                <tr class="table__row table__row_header">
+                                    <th class="table__cell table__cell_header">ФИО</th>
+                                    <th class="table__cell table__cell_header">Дата</th>
+                                    <th class="table__cell table__cell_header">Рост</th>
+                                    <th class="table__cell table__cell_header">Вес</th>
+                                </tr>
+                                <tr class="table__row table__row_header table__row_header-units">
+                                    <td class="table__cell table__cell_header-units">новорожденного(ой)</td>
+                                    <td class="table__cell table__cell_header-units">гг.мм.дд</td>
+                                    <td class="table__cell table__cell_header-units">сантимметры</td>
+                                    <td class="table__cell table__cell_header-units">граммы</td>
+                                </tr>
+                                </thead>
+
+                                <tbody class="table__body">
+                                <tr class="table__row table__row_body">
+                                    <td class="table__cell table__cell_body">Сидоров Иван Петрович</td>
+                                    <td class="table__cell table__cell_tbody textLeft">2017.01.07</td>
+                                    <td class="table__cell table__cell_body">53</td>
+                                    <td class="table__cell table__cell_body">2500</td>
+                                </tr>
+                                <tr class="table__row table__row_body">
+                                    <td class="table__cell table__cell_body">Иванов Петр Сидорович</td>
+                                    <td class="table__cell table__cell_tbody textLeft">2017.02.01</td>
+                                    <td class="table__cell table__cell_body">52</td>
+                                    <td class="table__cell table__cell_body">4200</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <!-- /layout in table add _bordered -->
+                        </section>
+                        <!-- /tabs drop-down 4-->
+                        <!-- tabs drop-down 5-->
+                        <section class="tabs__panel" id="table-content-5">
+                            <!-- layout in table add _striped -->
+                            <table class="table table_striped">
+                                <caption class="table__caption">
+                                    <h3>
+                                        Табличные данные выводятся посредством тега <strong>table</strong>
+                                    </h3>
+                                    <p>
+                                        Добавление класса модификатора <strong>_striped</strong> оформляет строки по
+                                        типу "зебры"
+                                    </p>
+                                </caption>
+                                <thead class="table__header">
+                                <tr class="table__row table__row_header">
+                                    <th class="table__cell table__cell_header">ФИО</th>
+                                    <th class="table__cell table__cell_header">Дата</th>
+                                    <th class="table__cell table__cell_header">Рост</th>
+                                    <th class="table__cell table__cell_header">Вес</th>
+                                </tr>
+                                <tr class="table__row table__row_header table__row_header-units">
+                                    <td class="table__cell table__cell_header-units">новорожденного(ой)</td>
+                                    <td class="table__cell table__cell_header-units">гг.мм.дд</td>
+                                    <td class="table__cell table__cell_header-units">сантимметры</td>
+                                    <td class="table__cell table__cell_header-units">граммы</td>
+                                </tr>
+                                </thead>
+
+                                <tbody class="table__body">
+                                <tr class="table__row table__row_body">
+                                    <td class="table__cell table__cell_body">Сидоров Иван Петрович</td>
+                                    <td class="table__cell table__cell_tbody textLeft">2017.01.07</td>
+                                    <td class="table__cell table__cell_body">53</td>
+                                    <td class="table__cell table__cell_body">2500</td>
+                                </tr>
+                                <tr class="table__row table__row_body">
+                                    <td class="table__cell table__cell_body">Иванов Петр Сидорович</td>
+                                    <td class="table__cell table__cell_tbody textLeft">2017.02.01</td>
+                                    <td class="table__cell table__cell_body">52</td>
+                                    <td class="table__cell table__cell_body">4200</td>
+                                </tr>
+
+                                <tr class="table__row table__row_body">
+                                    <td class="table__cell table__cell_body">Сидоров Иван Петрович</td>
+                                    <td class="table__cell table__cell_tbody textLeft">2017.01.07</td>
+                                    <td class="table__cell table__cell_body">53</td>
+                                    <td class="table__cell table__cell_body">2500</td>
+                                </tr>
+                                <tr class="table__row table__row_body">
+                                    <td class="table__cell table__cell_body">Иванов Петр Сидорович</td>
+                                    <td class="table__cell table__cell_tbody textLeft">2017.02.01</td>
+                                    <td class="table__cell table__cell_body">52</td>
+                                    <td class="table__cell table__cell_body">4200</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <!-- /layout in table add _striped -->
+                        </section>
+                        <!-- /tabs drop-down 5-->
+                    </div>
+
+
+                    <h3>
+                        Списки по БЭМ методологии
+                    </h3>
+                    <div class="tabs tabs_list">
+                        <!-- tabs label-->
+                        <input class="tabs__input" id="form-1" type="radio" name="tabs-form" checked>
+                        <label class="tabs__label" for="form-1">
+                            Список UL
+                        </label>
+
+                        <input class="tabs__input" id="form-2" type="radio" name="tabs-form">
+                        <label class="tabs__label" for="form-2">
+                            Список UL  _hover
+                        </label>
+
+                        <input class="tabs__input" id="form-3" type="radio" name="tabs-form">
+                        <label class="tabs__label" for="form-3">
+                            Список UL _horisontal
+                        </label>
+
+                        <input class="tabs__input" id="form-4" type="radio" name="tabs-form">
+                        <label class="tabs__label" for="form-4">
+                            Список UL _horisontal _hover
+                        </label>
+                        <!-- /tabs label-->
+                        <!-- tabs drop-down 1-->
+                        <section class="tabs__panel" id="form-content-1">
+                            <!-- layout list -->
+                            <nav class="navigation">
+                                <div class="navigation navigation_title">
+                                    Просто список
+                                </div>
+                                <ul class="menu">
+                                    <li class="menu__item">
+                                        <a href="#">О компании</a>
+                                    </li>
+                                    <li class="menu__item menu__item_active">
+                                        <a href="#">Активный пункт</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <span>Disabled</span>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#">Контакты</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- /layout list -->
+
+                        </section>
+                        <!-- /tabs drop-down 1-->
+                        <section class="tabs__panel" id="form-content-2">
+                            <!-- layout list add _hover -->
+                            <nav class="navigation">
+                                <div class="navigation navigation_title">
+                                    Список с <strong>_hover</strong>
+                                </div>
+                                <ul class="menu menu_hover">
+                                    <li class="menu__item">
+                                        <a href="#">О компании</a>
+                                    </li>
+                                    <li class="menu__item menu__item_active">
+                                        <a href="#">Активный пункт</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <span>Disabled</span>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a href="#">Контакты</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!-- /layout list add _hover -->
+                        </section>
+                        <!-- /tabs drop-down 2-->
+                        <!-- tabs drop-down 3-->
+                        <section class="tabs__panel" id="form-content-3">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-12">
+
+                                        <!-- layout list add _horisontal-->
+                                        <nav class="navigation">
+                                            <div class="navigation navigation_title">
+                                                Список с модификатором <strong>_horisontal</strong>
+                                            </div>
+                                            <ul class="menu menu_horisontal">
+                                                <li class="menu__item">
+                                                    <a href="#">О компании</a>
+                                                </li>
+                                                <li class="menu__item menu__item_active">
+                                                    <a href="#">Активный пункт</a>
+                                                </li>
+                                                <li class="menu__item">
+                                                    <span>Disabled</span>
+                                                </li>
+                                                <li class="menu__item">
+                                                    <a href="#">Контакты</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                        <!-- /layout list add _horisontal-->
+
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- /tabs drop-down 3-->
+                        <!-- tabs drop-down 4-->
+                        <section class="tabs__panel" id="form-content-4">
+                            <div class="container-fluid">
+                                <div class="row">
+
+                                    <!-- layout list add _horisontal and _hover -->
+                                    <nav class="col-xs-12 navigation">
+                                        <div class="navigation navigation_title">
+
+                                            Список с модификатором <strong>_horisontal</strong> <strong>_hover</strong>
+                                        </div>
+                                        <ul class="menu menu_horisontal menu_hover">
+                                            <li class="menu__item">
+                                                <a href="#">О компании</a>
+                                            </li>
+                                            <li class="menu__item menu__item_active">
+                                                <a href="#">Активный пункт</a>
+                                            </li>
+                                            <li class="menu__item">
+                                                <span>Disabled</span>
+                                            </li>
+                                            <li class="menu__item">
+                                                <a href="#">Контакты</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                    <!-- /layout list add _horisontal and _hover -->
+
+                                </div>
+                            </div>
+                        </section>
+                        <!-- /tabs drop-down 4-->
+                    </div>
+
+
+                </div>
+
+
+            </article>
+
+        </div>
+    </div>
+</section>
+
+
+
+<section class="container">
+    <!--  form_user  -->
+    <form class="form form_user">
+
+        <fieldset class="form-fieldset">
+            <legend class="fieldset-legend">Авторизация</legend>
+
+
+            <!-- name -->
+            <div class="form-group row row_gap">
+                <div class="col-xs-12 col-sm-2 col-md-2 col-lg-1">
+                    <div class="label-inner">
+                        <label class="label-inner__control" for="name">Имя:</label>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-11">
+                    <div class="input-inner">
+                    <span class="input-inner__addon">
+                        <span class="fa fa-user fa-1x"></span>
+                    </span>
+                        <input class="input-inner__control" type="text" id="name" placeholder="Введите имя" name="name"
+                               required>
+                    </div>
+                </div>
+            </div>
+            <!--  /name  -->
+            <!--  lastname-->
+            <div class="form-group row row_gap">
+                <div class="col-xs-12 col-sm-2 col-md-2 col-lg-1">
+                    <div class="label-inner">
+                        <label class="label-inner__control" for="lastname">Фамилия:</label>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-11">
+                    <div class="input-inner">
+                    <span class="input-inner__addon">
+                        <span class="fa fa-user fa-1x"></span>
+                    </span>
+                        <input class="input-inner__control" type="text" id="lastname" placeholder="Введите фамилию"
+                               name="lastname">
+                    </div>
+                </div>
+            </div>
+            <!--  /lastname  -->
+
+
+            <div class="form-group row row_gap">
+                <!-- password -->
+                <div class="col-xs-12 col-sm-2 col-md-2 col-lg-1">
+                    <div class="label-inner">
+                        <label class="label-inner__control" for="password">Пароль:</label>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-5">
+                    <div class="input-inner">
+                        <input class="input-inner__control" type="text" id="password" placeholder="Введите пароль"
+                               name="password">
+                        <span class="input-inner__addon">
+                        <span class="fa fa-key fa-1x"></span>
+                    </span>
+                    </div>
+                </div>
+                <!--  /password  -->
+                <!-- email -->
+                <div class="col-xs-12 col-sm-2 col-md-1 col-lg-1">
+                    <div class="label-inner">
+                        <label class="label-inner__control" for="email">Email:</label>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-5 col-lg-5">
+                    <div class="input-inner">
+                    <span class="input-inner__addon">
+                        <span class="fa fa-at fa-1x"></span>
+                    </span>
+                        <input class="input-inner__control" type="text" id="email" placeholder="Введите Ваш email"
+                               name="email">
+                    </div>
+                </div>
+                <!--  /email  -->
+            </div>
+
+        </fieldset>
+    </form>
+    <!--  /form_user  -->
+    <!--  form_quest  -->
+    <form class="form form_quest">
+
+        <fieldset class="form-fieldset">
+            <legend class="fieldset-legend">Небольшая форма опроса</legend>
+
+            <!-- subject -->
+            <div class="form-group row row_gap">
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+                    <div class="label-inner">
+                        <label class="label-inner__control" for="subject">Тема сообщения:</label>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10">
+                    <div class="input-inner">
+                    <span class="input-inner__addon">
+                        <span class="fa fa-info fa-1x"></span>
+                    </span>
+                        <input class="input-inner__control" type="text" id="subject" placeholder="Тема сообщения"
+                               name="subject" required>
+
+                    </div>
+                </div>
+            </div>
+            <!--  /subject  -->
+
+
+            <!-- comment -->
+            <div class="form-group row row_gap">
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+                    <div class="label-inner">
+                        <label class="label-inner__control" for="comment">Текст сообщения:</label>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10">
+                    <div class="input-inner">
+                        <textarea class="input-inner__control" type="text" id="comment"
+                                  placeholder="Введите Ваш комментарий..." maxlength="150" name="comment"
+                                  required></textarea>
+                        <span class="help-block">ВНИМАНИЕ! Сообщение не относящееся к теме страницы, будет удалено.</span>
+
+                    </div>
+                </div>
+            </div>
+            <!--  /comment  -->
+
+
+            <!-- select -->
+            <div class="form-group row row_gap">
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+                    <div class="label-inner">
+                        <label class="label-inner__control" for="select">Ваш банк:</label>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10">
+                    <div class="input-inner">
+                        <select class="input-inner__control" id="select" name="bank-name">
+                            <option value="bank-1">Сбербанк России</option>
+                            <option value="bank-2">ВТБ Банк Москвы</option>
+                            <option value="bank-3">Газпромбанк</option>
+                            <option value="bank-4">ВТБ 24</option>
+                            <option value="bank-5">Россельхозбанк</option>
+                            <option value="bank-6">ФК Открытие</option>
+                            <option value="bank-7">Альфа-Банк</option>
+                            <option value="bank-8">Национальный Клиринговый Центр</option>
+                            <option value="bank-9">Промсвязьбанк</option>
+                            <option value="bank-10">Московский Кредитный Банк</option>
+                            <option value="bank-11">ЮниКредит Банк</option>
+                            <option value="bank-12">Бинбанк</option>
+                            <option value="bank-13" selected>Райффайзенбанк</option>
+                        </select>
+
+                    </div>
+                </div>
+            </div>
+            <!--  /select  -->
+            <!-- test -->
+            <div class="form-group row row_gap">
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+                    &nbsp;
+                </div>
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10">
+                    <div class="checkbox-inner">
+                        <input class="checkbox__control" type="checkbox" name="type-card-1" id="test">
+                        <label class="label__control" for="test">
+                            Нажимая кнопку, Вы выражаете свое согласие на обработку Ваших данных?
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!--  /test  -->
+            <!-- agreement -->
+            <div class="form-group row row_gap">
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+                    <div class="label-inner">
+                        <span class="label-inner__control">Стилизация:</span>
+                    </div>
+                </div>
+                <div class="col-xs-3 col-sm-1 col-md-1 col-lg-1">
+                    <div class="checkbox-inner checkbox-inner_theme-info">
+                        <input class="checkbox__control" type="checkbox" name="type-card-1" id="agreement">
+                        <label class="label__control" for="agreement"></label>
+                    </div>
+                </div>
+                <div class="col-xs-9 col-sm-8 col-md-8 col-lg-9">
+
+                    <!--btn-design-->
+                    <button class="btn btn_theme-info btn_default">
+                        Отправка данных
+                    </button>
+                    <button class="btn btn_theme-info btn_info">
+                        Отправка данных
+                    </button>
+                    <button class="btn btn_theme-info btn_danger">
+                        Отправка данных
+                    </button>
+                    <button class="btn btn_theme-info btn_success">
+                        Отправка данных
+                    </button>
+                    <button class="btn btn_theme-info btn_primary">
+                        Отправка данных
+                    </button>
+                    <!--/btn-design-->
+
+                </div>
+
+
+            </div>
+            <!--  /agreement  -->
+
+            <!-- button -->
+
+            <div class="form-group row row_gap">
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+                    &nbsp;
+                </div>
+                <div class="col-xs-12 col-sm-9 col-md-9 col-lg-10">
+                    <!--btn-design"-->
+                    <button class="btn btn_default">
+                        Отправка данных
+                    </button>
+                    <button class="btn btn_info">
+                        Отправка данных
+                    </button>
+                    <button class="btn btn_danger">
+                        Отправка данных
+                    </button>
+                    <button class="btn btn_warning">
+                        Отправка данных
+                    </button>
+                    <button class="btn btn_success">
+                        Отправка данных
+                    </button>
+                    <button class="btn btn_primary">
+                        Отправка данных
+                    </button>
+                </div>
+
+
+            </div>
+
+
+            <!--  /button  -->
+
+
+        </fieldset>
+
+
+    </form>
+    <!--  /form_quest  -->
+</section>
+
+
+
+<footer class="footer-page">
+    <strong class="example-text">FOOTER</strong>
+</footer>
+
+
+</body>
+</html>
+
+

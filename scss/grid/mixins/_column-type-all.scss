@@ -1,0 +1,14 @@
+// Combining all types of columns
+@mixin column-type ($number, $type){
+  .col-#{$type}-#{$number} {
+    @extend %mixed-variable;
+  }
+}
+@mixin column-type-all{
+  @for $i from 1 through $grid-number {
+    @include column-type($i, "xs");
+    @include column-type($i, "sm");
+    @include column-type($i, "md");
+    @include column-type($i, "lg");
+  }
+}

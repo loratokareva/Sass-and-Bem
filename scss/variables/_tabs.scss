@@ -1,0 +1,32 @@
+
+$tabs-margin-vertical: 20px;
+$tabs-margin-horizontal: 0;
+$tabs-margin: $tabs-margin-vertical $tabs-margin-horizontal;
+
+$tabs-border: #ddd;
+$tabs-border-width: 1px;
+$tabs-border-style: solid;
+
+
+$tabs-label-color: #A2A2A2;
+$tabs-label-color-hover: #666666;
+$tabs-label-font-size: 15px;
+
+$tabs-label-align: center;
+$tabs-label-cursor-hover: pointer;
+$tabs-label-background: #f1f1f1;
+$tabs-label-background-checked: #ffffff;
+
+$tabs-label-padding-vertical: 15px;
+$tabs-label-padding-horizontal: 20px;
+$tabs-label-padding: $tabs-label-padding-vertical $tabs-label-padding-horizontal;
+
+$tabs-label-margin: 0 0 0-$tabs-border-width;
+
+$tabs-panel-font-size: 15px;
+$tabs-panel-background: #ffffff;
+$tabs-panel-padding: 15px;
+
+%tabs-value {
+  display: block;
+}

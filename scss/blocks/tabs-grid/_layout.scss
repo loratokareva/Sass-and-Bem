@@ -1,0 +1,71 @@
+@import "../../mixins/border-all", "../../mixins/border-position";
+
+%tabs-border-all {
+  @include border-all($tabs-border-width, $tabs-border-style, $tabs-border);
+}
+
+.tabs-grid {
+  font-size: 0;
+  &__input,
+  &__panel {
+    display: none;
+  }
+
+  &__input {
+    &:checked + label {
+      @include border-position(bottom, $tabs-border-width, $tabs-border-style, $tabs-panel-background);
+      background: $tabs-label-background-checked;
+    }
+  }
+  &__panel {
+    font-size: $tabs-panel-font-size;
+    padding: $tabs-panel-padding;
+    background: $tabs-panel-background;
+    @extend %tabs-border-all;
+  }
+
+  &__label {
+    display: block;
+    //display: inline-block;
+    margin: $tabs-label-margin;
+    //padding: $tabs-label-padding;
+    text-align: $tabs-label-align;
+    color: $tabs-label-color;
+    font-size: $tabs-label-font-size;
+    @extend %tabs-border-all;
+    background: $tabs-label-background;
+
+    &:not(:last-of-type) {
+      border-right: none;
+    }
+    &:hover {
+      color: $tabs-label-color-hover;
+      cursor: $tabs-label-cursor-hover;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+      span {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+      span {
+        display: none;
+      }
+    }
+    @media (min-width: 992px) {
+      font-size: 13px;
+      span {
+        display: none;
+      }
+    }
+    @media (min-width: 1200px) {
+      font-size: 15px;
+
+    }
+
+  }
+
+}
+

@@ -1,0 +1,10 @@
+// Grid System
+$grid-margin-left: 1%;
+$grid-number: 14;
+
+
+$grid-row-gap-top: 0;
+$grid-row-gap-bottom: 10px;
+$grid-row-gap-left: $grid-row-gap-top;
+$grid-row-gap-right: $grid-row-gap-top;
+$grid-row-gap: $grid-row-gap-top $grid-row-gap-right $grid-row-gap-bottom $grid-row-gap-left;

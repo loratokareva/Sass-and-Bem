@@ -1,0 +1,9 @@
+@mixin column-type-float($type) {
+  $col-type-list: null;
+  @for $i from 1 through $grid-number {
+    $col-type-list: append($col-type-list, unquote(".col-#{$type}-#{$i}"), comma);
+  }
+  #{$col-type-list} {
+    float: left;
+  }
+}

@@ -1,0 +1,10 @@
+// Calculation of width for column type
+// .col-xs-1 { width: ; }
+@mixin column-type-width($type) {
+  $time-value: 100% / $grid-number;
+  @for $i from 1 through $grid-number {
+    .col-#{$type}-#{$i} {
+      width: ($time-value * $i);
+    }
+  }
+}

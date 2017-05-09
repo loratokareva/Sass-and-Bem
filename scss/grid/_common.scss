@@ -1,0 +1,58 @@
+@import "variables";
+@import "mixins/column-type-all";         //  Combining all types of columns
+@import "mixins/column-type-float";       // .col-type-number {float: left;}
+@import "mixins/column-type-number-width";   // .col-type-number { width: %;}
+
+
+.container {
+  @media (min-width: 768px) {
+    width: 750px;
+  }
+  @media (min-width: 992px) {
+    width: 970px;
+  }
+  @media (min-width: 1200px) {
+    width: 1170px;
+  }
+}
+
+.row_gap {
+  margin: $grid-row-gap;
+}
+
+@include column-type-all;
+@include column-type-float(xs);
+@include column-type-width(xs);
+
+@media (min-width: 768px) {
+  @include column-type-float(sm);
+  @include column-type-width(sm);
+}
+
+@media (min-width: 992px) {
+  @include column-type-float(md);
+  @include column-type-width(md);
+}
+
+@media (min-width: 1200px) {
+  @include column-type-float(lg);
+  @include column-type-width(lg);
+}
+
+.clearfix:before,
+.clearfix:after,
+.container:before,
+.container:after,
+.container-fluid:before,
+.container-fluid:after,
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after,
+.container:after,
+.container-fluid:after,
+.row:after {
+  clear: both;
+}

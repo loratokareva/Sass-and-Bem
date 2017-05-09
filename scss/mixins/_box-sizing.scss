@@ -1,0 +1,10 @@
+@mixin box-sizing($argument) {
+  -webkit-box-sizing: $argument;
+  box-sizing: $argument;
+}
+
+/*
+  -ms-box-sizing: $argument;
+  -moz-box-sizing: $argument;
+  -o-box-sizing: $argument;
+*/

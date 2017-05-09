@@ -1,0 +1,13 @@
+@import "layout";
+@import "../../../mixins/vendor-prefixes/box-shadow";
+
+.btn {
+  @import "../../../theme/theme-info";
+
+  @import "../../../theme/default";
+  @import "../../../theme/primary";
+  @import "../../../theme/info";
+  @import "../../../theme/danger";
+  @import "../../../theme/warning";
+  @import "../../../theme/success";
+}

@@ -1,0 +1,15 @@
+.menu {
+  margin:  0;
+  padding: 0;
+
+  &__item {
+    list-style-type:none;
+    color: $color-list;
+    text-decoration: $text-decoration-list;
+    background-color: $background-color-list;
+    padding: $padding-list;
+
+  }
+  @import "../../clearfix";
+}
+
